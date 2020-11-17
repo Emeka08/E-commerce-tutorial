@@ -81,4 +81,7 @@ p {
 .red {
   color: #94004f;
 }
+a:hover {
+  text-decoration: none;
+}
 </style>

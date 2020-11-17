@@ -111,12 +111,10 @@ input:focus {
 .fa-search {
   background-color: #FBA100;
   padding: 9px .6rem;
-  position: relative;
-  right: 4px;
+  /* position: relative;
+  right: 4px; */
   border: 0 4px 4px 0;
-}
-.b {
-  border: 1px solid red;
+  color: red;
 }
 .login a {
   font-size: .9rem;
@@ -136,5 +134,8 @@ input:focus {
   margin-left: .4rem;
   border: none;
   border-radius: 2px;
+}
+a:hover {
+  text-decoration: none;
 }
 </style>
