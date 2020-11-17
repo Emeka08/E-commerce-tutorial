@@ -8,9 +8,9 @@
             <i class="fas fa-bars ml-1"></i>
           </p>
         </li>
-        <li class="pr-5">
-          <router-link to="/adminPage">
-            <p class="text-light">Admin Page</p>
+        <li @mouseenter="colorChange" @mouseleave="returnColor" class="pr-5">
+          <router-link class="" to="/adminPage">
+            <p v-bind:class="color">Admin Page</p>
           </router-link>
         </li>
         <li>
@@ -40,10 +40,18 @@
 export default {
   data () {
     return {
-      color: ''
+      color: 'white'
     }
   },
   computed: {
+  },
+  methods: {
+    colorChange: function () {
+      this.color = 'red'
+    },
+    returnColor: function () {
+      this.color = 'white'
+    }
   }
 }
 </script>
@@ -66,5 +74,11 @@ li:hover, .text-light:hover {
 }
 p {
   margin-bottom: 0;
+}
+.white {
+  color: white;
+}
+.red {
+  color: #94004f;
 }
 </style>

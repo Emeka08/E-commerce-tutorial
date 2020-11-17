@@ -10,6 +10,7 @@ import Product6 from '../views/Product6'
 import AdminPage from '../views/AdminPage'
 import Users from '../views/Users'
 import Buyers from '../views/Buyers'
+import Modal from '../views/LoginModal'
 
 Vue.use(Router)
 
@@ -49,6 +50,11 @@ export default new Router({
       path: '/product6',
       name: 'Product6',
       component: Product6
+    },
+    {
+      path: '/modal',
+      name: 'Modal',
+      component: Modal
     },
     {
       path: '/adminpage',

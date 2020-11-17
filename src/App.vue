@@ -30,6 +30,9 @@ li {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
 * {
   font-family: 'Asap Condensed', sans-serif;
   padding: 0;
@@ -44,6 +47,9 @@ a {
 }
 .w-30 {
   width: 30%;
+}
+.w-35 {
+  width: 35%;
 }
 .w-40 {
   width: 40%;
