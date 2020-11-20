@@ -4,7 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
-// import 'jQuery/lib/node-jquery.js'
+// import 'jQuery'
+// import 'jquery'
 import 'popper.js'
 
 Vue.config.productionTip = false
