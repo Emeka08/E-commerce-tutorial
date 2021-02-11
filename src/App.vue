@@ -1,21 +1,23 @@
 <template>
   <div class="main-body">
     <AppTopBar />
+    <AppMiniTopBar />
     <AppHeader />
     <AppLinks />
-    <router-view/>
-    <AppFooter />
+    <!-- <router-view/> -->
+    <!-- <AppFooter /> -->
   </div>
 </template>
 
 <script>
 import AppTopBar from '../src/components/Header/AppTopBar'
+import AppMiniTopBar from '../src/components/Header/AppMiniTopBar'
 import AppHeader from '../src/components/Header/AppHeader'
 import AppLinks from '../src/components/Header/AppLinks'
 import AppFooter from '../src/components/Footer/AppFooter'
 
 export default {
-  components: { AppTopBar, AppHeader, AppLinks, AppFooter }
+  components: { AppTopBar, AppMiniTopBar, AppHeader, AppLinks, AppFooter }
 }
 </script>
 

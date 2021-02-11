@@ -4,7 +4,7 @@
       <router-link to="/">
         <img width="100" src="https://www.konga.com/_next/static/images/62f8a0d88e07573b4d46735aa24f3f04.png" alt="">
       </router-link>
-      <ul class="d-flex m-0">
+      <ul class="d-flex m-0 ml-5">
         <li @mouseenter="colorChange" @mouseleave="returnColor" class="cursor">
           <a href="#" v-bind:class="color">Store Locator</a>
         </li>
@@ -16,11 +16,13 @@
         </li>
       </ul>
     </div>
-    <div class="w-45">
-      <input placeholder="Search for products, brands and categories...">
-      <i class="fas fa-search cursor text-light"></i>
+    <div class="w-40 search-box p-2">
+      <input type="text" placeholder="Search for products, brands and categories...">
+      <div class="d-inline yyy">
+        <i class="fas fa-search cursor text-light"></i>
+      </div>
     </div>
-    <div class="w-25 login">
+    <div class="w-30 login">
       <ul class='d-flex align-items-center mb-0 pl-0'>
         <li @mouseenter="colorChange3" @mouseleave="returnColor3" class="cursor">
           <a href="#" v-bind:class="color3">Admin</a>
@@ -28,7 +30,7 @@
         <li @mouseenter="colorChange4" @mouseleave="returnColor4" class="cursor">
           <a href="#" v-bind:class="color4">Login / Signup</a>
         </li>
-        <li class="cart cursor">
+        <li class="cart cursor ml-5">
           <a href="">
             <i class="fas fa-shopping-cart mr-1"></i>
             My Cart
@@ -83,8 +85,9 @@ export default {
 <style scoped>
 .appHeader {
   background-color: #ED017F;
-  position: relative;
-  bottom: 1rem;
+  /* background-color: red; */
+  /* position: relative;
+  bottom: 1rem; */
 }
 .logo a {
   color: white;
@@ -94,48 +97,93 @@ export default {
   color: #ED017F !important;
 }
 .logo li, .login li {
-  padding: 1rem .5rem;
+  padding: 1rem 1rem;
+}
+.logo li {
+  padding: 1rem 1rem;
 }
 .logo li:hover, .login li:hover {
   background-color: white;
 }
 input {
-  width: 500px;
-  padding: .3rem .3rem .3rem .6rem;
+  width: 460px;
+  padding: .5rem .3rem .5rem .6rem;
   border: none;
-  border: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+input[type = "text"] {
+  font-size: .7rem;
 }
 input:focus {
   outline: none;
 }
 .fa-search {
   background-color: #FBA100;
-  padding: 9px .6rem;
-  /* position: relative;
-  right: 4px; */
-  border: 0 4px 4px 0;
-  color: red;
+}
+.yyy {
+  padding: 6.7px 12px 9px;
+  background-color: #FBA100;
+  margin-left: -5px;
+  border-radius: 0 4px 4px 0;
 }
 .login a {
   font-size: .9rem;
   color: white;
 }
 .cart {
-  background-color: rgb(94, 180, 94);
+  background-color: #2d9e6dea;
   padding: .5rem 1rem !important;
 }
 .cart:hover {
-  background-color: #2D9E6D !important;
+  background-color: #2d9e6d !important;
 }
 .cart span {
   background-color: white;
   color: black;
-  padding: .1rem .5rem;
+  padding: .1rem .3rem;
   margin-left: .4rem;
   border: none;
   border-radius: 2px;
 }
 a:hover {
   text-decoration: none;
+}
+@media only screen and (max-width: 1350px) {
+  .search-box {
+    width: 100%;
+  }
+  .logo, .login {
+    display: none !important;
+  }
+  .search-box {
+    display: flex;
+    justify-content: center;
+    padding: 1rem .5rem;
+  }
+  input {
+    background-color: #F5F5F5;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .appHeader {
+    background-color: white;
+    bottom: 0;
+  }
+  input {
+    width: 100% !important;
+  }
+  .fa-search {
+    color: #ED017F !important;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .yyy, .fa-search {
+    background-color: #F5F5F5 !important;
+  }
+  .fa-search {
+    color: #d3d3d3 !important;
+  }
 }
 </style>

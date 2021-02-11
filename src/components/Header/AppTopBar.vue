@@ -26,6 +26,11 @@
           <img class="img" src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/assets/images/homepage/kxpress.png" alt="">
         </a>
       </li>
+      <li>
+        <a href="#">
+          <img class="img" src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/assets/images/homepage/konga_travel.png" alt="">
+        </a>
+      </li>
     </ul>
   </div>
 </template>
@@ -51,5 +56,11 @@ img, .img {
 }
 .appTopBar {
   background-color: #F6F6F6;
+  height: 6%;
+}
+@media only screen and (max-width: 700px) {
+  .appTopBar {
+    display: none;
+  }
 }
 </style>

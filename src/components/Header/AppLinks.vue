@@ -2,13 +2,13 @@
   <div>
     <nav>
       <ul class="d-flex m-0 pl-0 appLinks">
-        <li class="pr-5">
+        <li>
           <p>
             All Categories
             <i class="fas fa-bars ml-1"></i>
           </p>
         </li>
-        <li @mouseenter="colorChange" @mouseleave="returnColor" class="pr-5">
+        <li @mouseenter="colorChange" @mouseleave="returnColor">
           <router-link class="" to="/adminPage">
             <p v-bind:class="color">Admin Page</p>
           </router-link>
@@ -61,10 +61,10 @@ export default {
 .appLinks {
   background-color: #94004F;
   position: relative;
-  bottom: 1rem;
+  bottom: 0rem;
 }
 li {
-  padding: .5rem 1.7rem;
+  padding: .5rem 2.5rem;
   cursor: pointer;
   color: white;
 }
@@ -74,6 +74,7 @@ li:hover, .text-light:hover {
 }
 p {
   margin-bottom: 0;
+  font-size: 12px;
 }
 .white {
   color: white;
@@ -83,5 +84,11 @@ p {
 }
 a:hover {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1350px) {
+  .appLinks {
+    display: none !important;
+  }
 }
 </style>
